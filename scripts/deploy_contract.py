@@ -19,8 +19,8 @@ def deploy_contract():
         {"from": account},
     )
     fund_with_link(contract.address)
-    tx1 = contract.getRandomness({"from": account})
-    tx1.wait(1)
+    tx = contract.getRandomness({"from": account})
+    tx.wait(1)
     time.sleep(200)
     print(f"The random number is {contract.randomNumber()}")
     print(f"The dice rolled is {contract.rollDice()}")
