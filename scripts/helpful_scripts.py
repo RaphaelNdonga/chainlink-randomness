@@ -13,8 +13,8 @@ def fund_with_link(contract_address):
         config["networks"][network.show_active()]["link"],
         LinkToken.abi,
     )
-    amount = 0.1 * 10 ** 18
-    tx = link.transfer(contract_address, amount, {"from": account})
+    fee = 0.1 * 10 ** 18
+    tx = link.transfer(contract_address, fee, {"from": account})
     tx.wait(1)
     print("Contract funded with link successfully")
     return tx
