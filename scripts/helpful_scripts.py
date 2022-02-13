@@ -2,10 +2,7 @@ from brownie import Contract, accounts, network, config, LinkToken
 
 
 def get_account():
-    if network.show_active() == "development":
-        account = accounts[0]
-    else:
-        account = accounts.add(config["wallets"]["from_key"])
+    account = accounts.add(config["wallets"]["from_key"])
     return account
 
 
