@@ -22,4 +22,5 @@ def deploy_contract():
     tx1 = contract.getRandomness({"from": account})
     tx1.wait(1)
     time.sleep(200)
+    print(f"The random number is {contract.randomNumber()}")
     print(f"The dice rolled is {contract.rollDice()}")
