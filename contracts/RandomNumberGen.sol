@@ -34,6 +34,6 @@ contract RandomNumberGen is VRFConsumerBase {
     }
 
     function rollDice() public view returns (uint256) {
-        return randomNumber;
+        return (randomNumber % 6) + 1;
     }
 }
